@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page with Grid Layout</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="close-btn">X</button>
+      <h1>Registration Form</h1>
+
+      <form action="#" method="post">
+        <div class="form-grid">
+          <!-- Full Name and Email side by side -->
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Password and Password confirmation side by side -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+
+          <!-- Phone and Date of Birth side by side -->
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              pattern="[0-9]{10,15}"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="birthdate">Date of Birth</label>
+            <input type="date" id="birthdate" name="birthdate" />
+          </div>
+
+          <!-- Country and Age side by side -->
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="">Select your country</option>
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <option value="australia">Australia</option>
+              <option value="germany">Germany</option>
+              <option value="france">France</option>
+              <option value="japan">Japan</option>
+              <option value="turkey">Turkey</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              max="120"
+              placeholder="Enter your age"
+            />
+          </div>
+
+          <!-- Three column layout for short inputs -->
+          <div class="form-grid-three">
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="favorite_color">Favorite Color</label>
+              <input
+                type="color"
+                id="favorite_color"
+                name="favorite_color"
+                value="#4CAF50"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="search">Search</label>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+
+          <!-- Full width for satisfaction level -->
+          <div class="form-group form-grid-full">
+            <label for="satisfaction">Satisfaction Level</label>
+            <input
+              type="range"
+              id="satisfaction"
+              name="satisfaction"
+              min="0"
+              max="100"
+              value="75"
+            />
+            <span class="range-value">75</span>
+          </div>
+          <div class="form-grid-three">
+            <!-- Profile picture and bio side by side -->
+            <div class="form-group">
+              <label for="profile_picture">Profile Picture</label>
+              <input
+                type="file"
+                id="profile_picture"
+                name="profile_picture"
+                accept="image/*"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="user_id">User ID (auto-generated)</label>
+              <input
+                type="text"
+                id="user_id"
+                name="user_id"
+                value="USR12345"
+                readonly
+              />
+            </div>
+
+            <!-- Special offer and bio side by side -->
+            <div class="form-group">
+              <label for="special_offer">Special Offer Code</label>
+              <input
+                type="text"
+                id="special_offer"
+                name="special_offer"
+                value="Not available"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="form-group form-grid-full">
+            <label for="bio">Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="4"
+              placeholder="Tell us about yourself"
+            ></textarea>
+          </div>
+
+          <!-- Full width for interests -->
+          <div class="form-group form-grid-full">
+            <label>Interests</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="sports" /> Sports
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="music" /> Music
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="reading" />
+                Reading
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="travel" /> Travel
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="technology" />
+                Technology
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="cooking" />
+                Cooking
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="art" /> Art
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="gaming" /> Gaming
+              </label>
+            </div>
+          </div>
+
+          <!-- Full width for gender selection -->
+          <div class="form-group form-grid-full">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="gender" value="male" /> Male
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="female" /> Female
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="other" /> Other
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="prefer_not_to_say" />
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+
+          <!-- Hidden input -->
+          <input type="hidden" name="registration_source" value="web_form" />
+
+          <!-- Submit and Reset buttons -->
+          <div class="button-group form-grid-full">
+            <button type="submit">Register Now</button>
+            <button type="reset">Clear Form</button>
+          </div>
+
+          <div class="form-footer form-grid-full">
+            <p>Already have an account? <a href="#">Log in here</a></p>
+            <p>
+              By registering, you agree to our
+              <a href="#">Terms of Service</a> and
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Simple script to update range value display
+      const rangeInput = document.getElementById("satisfaction");
+      const rangeValue = document.querySelector(".range-value");
+
+      rangeInput.addEventListener("input", function () {
+        rangeValue.textContent = this.value;
+      });
+    </script>
+  </body>
+</html>
